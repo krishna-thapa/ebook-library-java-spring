@@ -1,7 +1,7 @@
 package com.krishna.onlinelibrary.repository;
 
 
-import com.krishna.onlinelibrary.appUser.AppUser;
+import com.krishna.onlinelibrary.models.AppUser;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package com.krishna.onlinelibrary.appUser;
+package com.krishna.onlinelibrary.models;
 
 public enum AppUserRole {
     USER,
