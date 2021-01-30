@@ -21,6 +21,9 @@
 ### Port Mapping
 - Have used different host port(`5430`) instead of using the same port that docker container is run so that it won't conflict for another project that is running the Postgres container. 
 
+### Environment variables
+- All the required environment variables are declared under `.env` file that can be added in the `.gitignore` for the production.
+
 ### Faced issues:
 1. `Database directory appears to contain a database; Skipping initialization`: Have to delete all the local mounted volumes directory and re-run the docker-compose command. That would be `pgdata` directory under the root project folder for macOS and `var/` would be for Linux. 
 
