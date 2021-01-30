@@ -1,22 +1,23 @@
 version: '3.3'
 
 services:
-  postgres:
+  postgres-library:
     image: postgres:latest
-    container_name: pg-docker
+    container_name: pg-docker-library
     restart: always
     environment:
-      POSTGRES_DB: registration
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      PGDATA: /var/lib/postgresql/data/pgdata/
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - PGDATA
     ports:
-      - 5432:5432
+        # Have used host port 5432 already for another project
+      - 5430:5432
     volumes:
+      - "./sqlQueries/db.sql:/docker-entrypoint-initdb.d/db.sql"
       # for debian system use: /var/lib/postgresql/data/:/var/lib/postgresql/data/pgdata
       # for mac OS: ./pgdata/:/var/lib/postgresql/data/pgdata and copy the CSV files under pgdata
       # which will be under the project level directory, not the root level
       - "./pgdata/:/var/lib/postgresql/data/pgdata"
-    # command: postgres -c config_file=/etc/postgresql/postgresql.conf
 volumes:
   pgdata:

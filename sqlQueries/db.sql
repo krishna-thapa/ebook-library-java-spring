@@ -1,0 +1,2 @@
+-- Write all the sql queries that should be run when the docker container is initialized
+-- For example creating database, user for specific database
