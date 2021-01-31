@@ -19,5 +19,9 @@ services:
       # for mac OS: ./pgdata/:/var/lib/postgresql/data/pgdata and copy the CSV files under pgdata
       # which will be under the project level directory, not the root level
       - "./pgdata/:/var/lib/postgresql/data/pgdata"
+  maildev:
+    image: maildev/maildev
+    ports:
+      - "1080:80"
 volumes:
   pgdata:
