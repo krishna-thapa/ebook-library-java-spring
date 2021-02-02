@@ -31,4 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Postgres mount local volume(only in MacOS)
 /pgdata/
