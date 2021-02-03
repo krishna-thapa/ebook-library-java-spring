@@ -12,6 +12,9 @@
 ### Resources 
 - Initial Spring structure form [tutorial](https://www.youtube.com/watch?v=QwQuro7ekvc).
 
+### Some documentations
+- https://github.com/krishna-thapa/ebook-library-java-spring/tree/main/docs
+
 ### Future plan
 - Start adding classes, services and repository for the e-Book library project using data from: https://corgis-edu.github.io/corgis/csv/classics/
 - Start adding logs and fix the error handling in http response, [more help](https://www.baeldung.com/rest-api-error-handling-best-practices).
@@ -29,4 +32,5 @@ Postgres container has a volume mounted to the local machine's directory, which 
 ### How to run
 1. Download the required docker images and run them using the command: `docker-compose up`
 2. Go to the file: `OnlineLibraryApiApplication.java` and run 
-3. Can also be done using maven or gradle plugins
+3. Can be run in the terminal using command: `./mvnw spring-boot:run`
+4. Can also be done using maven or gradle plugins
